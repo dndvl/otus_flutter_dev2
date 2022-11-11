@@ -9,7 +9,6 @@ class Calculator {
   }) {
     try {
       parsedExpression = parse(expression: expression);
-      print(parsedExpression);
     } catch (e) {
       throw 'ParseError';
     }
@@ -175,10 +174,10 @@ extension ListSplice on List {
         ...sublist(0, start),
       ];
     }
-    if (start+len < length) {
+    if (start + len < length) {
       list = [
         ...list,
-        ...sublist(start+len),
+        ...sublist(start + len),
       ];
     }
     return list;

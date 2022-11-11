@@ -8,10 +8,13 @@ void main(List<String> arguments) {
 
     // Проверяем наличие неизвестных
     var undefinedVars = io.askUndefinedVars(
-        calculator.parseUndefinedVars(expression)
+      calculator.parseUndefinedVars(expression),
     );
 
-    var calc = calculator.Calculator(expression: expression, undefinedVars: undefinedVars);
+    var calc = calculator.Calculator(
+      expression: expression,
+      undefinedVars: undefinedVars,
+    );
 
     print('Result: ${calc.result()}');
   } else {
